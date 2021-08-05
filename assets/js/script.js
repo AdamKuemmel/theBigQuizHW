@@ -32,14 +32,13 @@ var questions = [
 function questionFunk() {
   $("#start").replaceWith("");
   console.log(questions[0].question);
-for (var i = 0; i < questions[0].answers.length; i++) { 
-    
-    var buttons = $('<button>'+ answers[i] + '</button>'); 
-    buttons.appendTo('#container'); }
+  for (var i = 0; i < questions[0].answers.length; i++) {
+    var buttons = $("<button>");
+    buttons.text(questions[0].answers[i]);
 
-
-
-//create
+    buttons.appendTo("#container");
+  }
+}
 
 //create a funtion to track the score
 
@@ -62,4 +61,4 @@ for (var i = 0; i < questions[0].answers.length; i++) {
 //$("#top").siblings().eq(3).append[1]
 //create a for loop for the questions
 
-//create a for loop for the answers
+//create a for loop for the
