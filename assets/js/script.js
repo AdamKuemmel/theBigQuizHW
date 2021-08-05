@@ -1,43 +1,63 @@
-$("#questionInput").text("");
-$("#insideA").text("this is the answer.");
-$("#insideB").text("this is the answer.");
-$("#insideC").text("this is the answer.");
-$("#insideD").text("this is the answer.");
+//load the Start quiz screen
+$("#start").append("click here to start your quiz");
 
-//question array
-var questions = [
-  "whats is the name of my dog?",
-  "what is his breed",
-  "what is his favorite toy?",
-];
-// correct answer arrays
-var correctA = ["Bruce", "german shepherd", "chuck-it ball"];
+//set the start button click event function
+$("#start")
+  .append("<button>Start</button>")
+  .click(function () {
+    alert("your game is now starting");
+    questionFunk();
+  });
 
+var correctA = ["bruce", "German shepherd", "chuck-it ball"];
 //answer arrays
-var answers = [
+var questions = [
   {
-    A: "paul",
-    B: "buddy",
-    C: "Bruce",
-    D: "milo",
+    question: ["whats is the name of my dog?"],
+    answers: ["paul", "buddy", "Bruce", "milo"],
+    correctA: correctA[0],
   },
   {
-    A: "german shepherd",
-    B: "pitbull",
-    C: "golden doodle",
-    D: "poodle",
+    question: ["what is his breed"],
+    answers: ["German shepherd", "lab", "pibull", "golden doodle"],
+    correctA: correctA[1],
   },
   {
-    A: "tennis ball",
-    B: "kong",
-    C: "rope",
-    D: "chuck-it ball",
+    question: ["what is his favorite toy?"],
+    answers: ["rope", "tennis ball", "kong", "chuck-it ball"],
+    correctA: correctA[2],
   },
 ];
+//create a funtion to load the question into your container with each answer being a button
+function questionFunk() {
+  $("#start").replaceWith("");
+  console.log(questions[0].question);
+for (var i = 0; i < questions[0].answers.length; i++) { 
+    
+    var buttons = $('<button>'+ answers[i] + '</button>'); 
+    buttons.appendTo('#container'); }
 
-for (var i = 0; i < answers.length; i++) {
-  console.log(answers[2]);
-}
+
+
+//create
+
+//create a funtion to track the score
+
+//
+
+//console.log(questions[0].answers);
+
+//for (var i = 0; i < answers.length; i++) {
+///console.log(answers[i]);
+//}
+
+// $("#questionInput").text(questions[0]);
+// $("#insideA").text(<button></button>);
+// $("#insideB").text(answers[0]);
+// $("#insideC").text(answers[0]);
+// $("#insideD").text(answers[0]);
+
+// consolelog(answers[0].A);
 
 //$("#top").siblings().eq(3).append[1]
 //create a for loop for the questions
